@@ -12,16 +12,16 @@
     <div class="preferences-container">
     <div class="preferences-title">Academic/Career Mentorship Focus</div>
     <form class="options" action="{{ url_for('academic') }}" method="post">
-    <input type="radio" id="classes" name="academic_preference" value="classes" class="option-input" data-speech-command="choosing major, classes">
+    <input type="radio" id="classes" name="academic_preference" value="classes" class="option-input" data-speech-command="one">
     <label for="classes" class="option-label">Choosing Major/Classes</label>
 
-    <input type="radio" id="thesis" name="academic_preference" value="thesis" class="option-input" data-speech-command="thesis, research">
+    <input type="radio" id="thesis" name="academic_preference" value="thesis" class="option-input" data-speech-command="two">
     <label for="thesis" class="option-label">Thesis/Research</label>
 
-    <input type="radio" id="profdev" name="academic_preference" value="profdev" class="option-input" data-speech-command="professional development, career">
+    <input type="radio" id="profdev" name="academic_preference" value="profdev" class="option-input" data-speech-command="three">
     <label for="profdev" class="option-label">Professional Development</label>
 
-    <input type="radio" id="grad-school" name="academic_preference" value="grad-school" class="option-input" data-speech-command="grad school, graduate">
+    <input type="radio" id="grad-school" name="academic_preference" value="grad-school" class="option-input" data-speech-command="four">
     <label for="grad-school" class="option-label">Grad School</label>
 
     <button type="submit" class="submit-button" data-speech-command="submit">Submit</button>
