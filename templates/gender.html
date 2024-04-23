@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mentorship Matcher</title>
+    <!-- Fix the link for CSS file to properly point to the static directory -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Simplified Google Fonts link for better loading and removed unnecessary styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <script src="/main.js"></script> 
+</head>
+<body>
+
+<div class="preferences-container">
+    <div class="preferences-title">Preferences</div>
+    <!-- Added action for the form to handle POST requests -->
+    <form action="{{ url_for('preferences') }}" method="POST">
+        <input type="radio" id="man" name="gender" value="man" class="option-input" data-speech-command="man">
+        <label for="man" class="option-label">Man</label>
+
+        <input type="radio" id="woman" name="gender" value="woman" class="option-input" data-speech-command="woman">
+        <label for="woman" class="option-label">Woman</label>
+
+        <input type="radio" id="non-binary" name="gender" value="non-binary" class="option-input" data-speech-command="nonbinary">
+        <label for="non-binary" class="option-label">Non-Binary</label>
+
+        <input type="radio" id="dont-care" name="gender" value="dont-care" class="option-input" data-speech-command="no, preference">
+        <label for="dont-care" class="option-label">No preference</label>
+        
+    </form>
+    <!-- Correctly used Flask's url_for for redirection -->
+    <button onclick="location.href='start'" class="restart-button">Restart</button>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mentorship Matcher</title>
+    <link rel="stylesheet"  type="text/css" href="{{url_for('.static', filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,100&display=swap" rel="stylesheet">
+    <script src="/main.js"></script> 
+  </head>
+<body>
+
+<div class="preferences-container">
+  <div class="preferences-title">Do you want your mentor to be from a rural area?</div>
+  <form class="options">
+    <input type="radio" id="yes" name="fgli_preference" value="yes" class="option-input" data-speech-command="yes">
+    <label for="yes" class="option-label">Yes</label>
+
+    <input type="radio" id="no" name="fgli_preference" value="no" class="option-input" data-speech-command="no">
+    <label for="no" class="option-label">No</label>
+  </form>
+  <button onclick="location.href='start'" class="restart-button">Restart</button>
+</div>
+</body>
+</html>

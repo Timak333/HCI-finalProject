@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mentorship Matcher</title>
+    <!-- Fixed the stylesheet link by correcting the url_for function -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Using Google Fonts for typography enhancements -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preferences-container">
+        <h1>Looking for a mentor?</h1>
+        <h3>Click anywhere to begin.</h3>
+
+        <br><br><br><br><br><br><br>
+        <p style="font-size:18px;">Looking to be a mentor? Sign up below.</p>
+
+        <img class="qr" id="qr-signup" src="{{ url_for('static', filename='mentor_signup_qr.jpg') }}">
+    </div>
+
+    <script>
+        document.addEventListener("click", function() {
+            window.location.href = "{{ url_for('category') }}";
+        });
+    </script>
+</body>
+</html>

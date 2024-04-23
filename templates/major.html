@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Choosing Discipline</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <script src="/main.js"></script> 
+</head>
+<body>
+
+<div class="preferences-container">
+    <div class="preferences-title">Choosing Discipline</div>
+    <div class="question">Which category does your major/professional interest fall under?</div>
+    <form class="options">
+        <input type="radio" id="technology" name="major_category" value="technology" class="option-input" data-speech-command="technology">
+        <label for="technology" class="option-label">Technology</label>
+
+        <input type="radio" id="finance" name="major_category" value="finance" class="option-input" data-speech-command="Finance">
+        <label for="finance" class="option-label">Finance</label>
+
+        <input type="radio" id="engineering" name="major_category" value="engineering" class="option-input" data-speech-command="engineering">
+        <label for="engineering" class="option-label">Engineering</label>
+
+        <input type="radio" id="medical" name="major_category" value="medical" class="option-input" data-speech-command="medical">
+        <label for="medical" class="option-label">Medical</label>
+
+        <input type="radio" id="law" name="major_category" value="law" class="option-input" data-speech-command="law">
+        <label for="law" class="option-label">Law</label>
+
+        <input type="radio" id="humanities" name="major_category" value="humanities" class="option-input" data-speech-command="humanities">
+        <label for="humanities" class="option-label">Humanities</label>
+    </form>
+    <button onclick="location.href='start'" class="restart-button">Restart</button>
+</div>
+</body>
+</html>
+

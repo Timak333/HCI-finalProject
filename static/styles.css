@@ -1,0 +1,87 @@
+body {
+    background-color: whitesmoke; /* Set background color to cream */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    text-align: center; 
+}
+
+.preferences-container {
+    margin-top: 100px;
+}
+
+.preferences-title {
+    font-size: 24px;
+    color: #000080; /* Set title color to navy blue */
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 100px; 
+}
+
+.option-label {
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #000080; /* Set text color to navy blue */
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adds transition effect for background color and text color */
+}
+
+.option-input {
+    display: none;
+}
+
+.option-input:checked + .option-label {
+    background-color: #000080; /* Set background color to light blue when clicked */
+    color: #FFFFFF; /* Set text color to white when clicked */
+}
+
+.submit-button,
+.restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #000080; /* Set button background color to navy blue */
+    color: #FFFFFF; /* Set button text color to white */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover,
+.restart-button:hover {
+    background-color: #0000CD; /* Darker shade of blue for our hover */
+}
+
+.qr {
+    width: 200px; 
+    height: auto; 
+}
+
+.mentor-image {
+    width: 200px; 
+    height: auto; 
+}
+
+.mentors {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between each card */
+    padding: 20px; 
+}
+
+.mentor-card {
+    flex: 1 1 300px;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    background-color: #fff; /* Sets a white background for each card */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a light shadow to each card */
+    text-align: center; 
+}

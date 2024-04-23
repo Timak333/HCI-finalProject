@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentorship Matcher</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,100&display=swap" rel="stylesheet">
+    <script src="/main.js"></script> 
+</head>
+<body>
+    <div class="preferences-container">
+        <div class="preferences-title">Select a mentorship category.</div>
+        <form class="options" action="{{ url_for('category') }}" method="post">
+            <input type="radio" id="academic" name="category" value="academic" class="option-input" data-speech-command="academic, career">
+            <label for="academic" class="option-label">Academic/Career</label>
+
+            <input type="radio" id="personal" name="category" value="personal" class="option-input" data-speech-command="personal, identity">
+            <label for="personal" class="option-label">Personal/Identity</label>
+            <button type="submit" class="submit-button" data-speech-command="submit">Submit</button>
+        </form>
+        
+        <button onclick="location.href='start'" class="restart-button">Restart</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mentorship Matcher</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <script src="/match.js"></script> <!-- Ensure WebSocket script is included -->
+</head>
+<body>
+    <h1>Here are your matches!</h1>
+    <p>Say the name of a mentor to select them.</p> <!-- Updated instruction -->
+    <br>
+
+    <div class="mentors">
+        <form id="contact-form" method="post" action="{{ url_for('contact') }}">
+            <input type="hidden" id="mentor-name" name="name" value="">
+            <input type="hidden" id="mentor-email" name="email" value="">
+            <input type="hidden" id="mentor-description" name="description" value="">
+        </form>
+
+        {% for mentor in mentors %}
+        <div class="mentor-card" data-speech-command="{{ mentor.name.lower() }}">
+                <img class="mentor-image" src="/static/profile_pic.png">
+                <p class="mentor-name">{{ mentor.name }}</p>
+                <p class="mentor-email">{{ mentor.email }}</p>
+                <p class="mentor-description">{{ mentor.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <button onclick="location.href='start'" class="restart-button">Restart</button>
+</body>
+</html>
+</body>
+</html>

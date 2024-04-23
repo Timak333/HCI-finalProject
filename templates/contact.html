@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentorship Matcher</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Congratulations, you found a mentor!</h1>
+
+    <div class="mentors">
+        <div class="mentor-card" id="mentor-card">
+            <img class="mentor-image" src="{{ url_for('static', filename='profile_pic.png') }}" alt="Mentor Profile Picture">
+            <p class="mentor-name">{{ mentor.name }}</p>
+            <p class="mentor-email">{{ mentor.email }}</p>
+            <p class="mentor-description">{{ mentor.description }}</p>
+        </div>
+        <div class="qr-box">
+            <img class="qr" src="{{ url_for('static', filename='email_qr.jpg') }}" alt="QR Code for Email">
+            <p class="qr-description">Scan to email your new mentor!</p>
+            <img class="qr" src="{{ url_for('static', filename='feedback_qr.jpg') }}" alt="QR Code for Feedback">
+            <p class="qr-description">Scan to leave the project creators feedback.</p>
+        </div>
+    </div>
+
+    <button onclick="location.href='start'" class="restart-button">Restart</button>
+
+</body>
+</html>
