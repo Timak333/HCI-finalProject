@@ -20,5 +20,18 @@
         </form>
         <button onclick="location.href='start'" class="restart-button">Restart</button>
     </div>
+
+    <script>
+        document.querySelectorAll(".option-input").forEach(function(radio) {
+            radio.addEventListener("change", function() {
+                if (this.value === "yes") {
+                    window.location.href = "rural";
+                } else if (this.value === "no") {
+                    window.location.href = "rural";
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
